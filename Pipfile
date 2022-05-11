@@ -1,0 +1,24 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = false
+
+[dev-packages]
+autopep8 = "*"
+
+[packages]
+pipfile = "*"
+pandas = "*"
+numpy = "1.21.2"
+pysam = "0.15.3"
+matplotlib = "*"
+scikit-learn = "*"
+seaborn = "*"
+tqdm = "*"
+openpyxl = "*"
+
+[requires]
+python_version = "3.9"
+
+[pipenv]
+allow_prereleases = true
