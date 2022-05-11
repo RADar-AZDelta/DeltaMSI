@@ -43,11 +43,11 @@ podman run --rm -it localhost/deltamsi:v1.0.0 train -h
 
 DeltaMSI has 3 modes: training, prediction and evaluation.
 
+### Training
+
 ```bash
 python3 -m pipenv run python src/app.py train -bed /data/msi.bed -ihc /data/train_data.csv -o /data/deltamsi -bamf /data/train_samples.txt -v
 ```
-
-### Training
 
 In this step, based on the supplied regions and samples, regions and samples are filtered, models trained and cutoffs generated. Everything happens automatically, without user interaction.  
 1. For each supplied region and sample the microsatellite length profile is determined. This is done by filtering all reads out of the bam files that overlap the complete mirosatellite, including a small flanking region at both sides to compensate possible missmapping. These reads are filtered for mapping quality and reads marked as duplicates are removed.  
