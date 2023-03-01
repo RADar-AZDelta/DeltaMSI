@@ -4,7 +4,7 @@ DeltaMSI is a MSI screening tool using AI to score regions and samples.
 
 ## Citation
 
-The article of this tool is currently under review.
+Swaerts, K., Dedeurwaerdere, F., De Smet, D. et al. DeltaMSI: artificial intelligence-based modeling of microsatellite instability scoring on next-generation sequencing data. BMC Bioinformatics 24, 73 (2023). https://doi.org/10.1186/s12859-023-05186-3
 
 ## Licence
 
