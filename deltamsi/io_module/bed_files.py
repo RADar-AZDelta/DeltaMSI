@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from model.region import Region
+from deltamsi.model.region import Region
 
 def create_regions_from_bed(bed_file: str) -> list:
     """Create a list of regions from the given bed file

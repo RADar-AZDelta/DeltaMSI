@@ -15,15 +15,15 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from io_module.bed_files import create_regions_from_bed
-from io_module.bam_files import parse_bam_file_to_profiles
-from io_module.json_files import write_json
-from io_module.json_files import read_json
+from deltamsi.io_module.bed_files import create_regions_from_bed
+from deltamsi.io_module.bam_files import parse_bam_file_to_profiles
+from deltamsi.io_module.json_files import write_json
+from deltamsi.io_module.json_files import read_json
 
-from model.region import Region 
-from model.profile import Profile
-from model.sample import Sample
-from model.region_profile import RegionProfile
+from deltamsi.model.region import Region 
+from deltamsi.model.profile import Profile
+from deltamsi.model.sample import Sample
+from deltamsi.model.region_profile import RegionProfile
 
 import os
 

@@ -15,15 +15,15 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from io_module.bed_files import create_regions_from_bed
-from ai.sample_predictor import Sample_Predictor
-from ai.create_profile import get_sample_from_bam
-from io_module.ihc_files import update_ihc_status
-from ai.training_functions import train_test_split
-from io_module.json_files import dict_to_json
+from deltamsi.io_module.bed_files import create_regions_from_bed
+from deltamsi.ai.sample_predictor import Sample_Predictor
+from deltamsi.ai.create_profile import get_sample_from_bam
+from deltamsi.io_module.ihc_files import update_ihc_status
+from deltamsi.ai.training_functions import train_test_split
+from deltamsi.io_module.json_files import dict_to_json
 
-from model.sample import Sample 
-from model.prediction import Prediction
+from deltamsi.model.sample import Sample 
+from deltamsi.model.prediction import Prediction
 
 from joblib import dump as joblibdump 
 from joblib import load as joblibload

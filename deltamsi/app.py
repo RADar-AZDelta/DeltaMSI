@@ -17,10 +17,10 @@
 import argparse
 import sys 
 import os
-from ai.create_profile import create_profile
-from ai.model import AIModel
+from deltamsi.ai.create_profile import create_profile
+from deltamsi.ai.model import AIModel
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description="""
     DeltaMSI Copyright 2022 Koen Swaerts, AZ Delta
     This program comes with ABSOLUTELY NO WARRANTY; for details see the GPLv3 LICENCE
@@ -201,3 +201,7 @@ if __name__ == "__main__":
             print("No bam file selected")
             sys.exit("No bam file selected")
         AIModel.evaluate(model_directory, correct_bam_list, ihc_file, out_dir, verbose=verbose)
+
+
+if __name__ == "__main__":
+    main()

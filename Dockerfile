@@ -9,4 +9,4 @@ RUN pip3 install --no-cache-dir --user pipenv \
 
   
 WORKDIR /code
-ENTRYPOINT ["python3", "-m", "pipenv", "run", "python", "src/app.py"]
+ENTRYPOINT ["python3", "-m", "pipenv", "run", "python", "deltamsi/app.py"]

@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from model.sample import Sample
+from deltamsi.model.sample import Sample
 import numpy as np
 
 class Prediction():

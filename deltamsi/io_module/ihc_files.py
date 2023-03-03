@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from model.region import Region
+from deltamsi.model.region import Region
 
 def update_ihc_status(ihc_file: str, sample_dict: dict) -> dict:
     """Read the IHC status and update the samples

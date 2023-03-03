@@ -15,8 +15,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from model.region import Region
-from model.profile import Profile
+from deltamsi.model.region import Region
+from deltamsi.model.profile import Profile
 
 import numpy as np
 

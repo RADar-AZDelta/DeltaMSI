@@ -28,12 +28,12 @@ from sklearn.svm import SVC
 from sklearn.metrics import balanced_accuracy_score
 from sklearn.metrics import confusion_matrix
 
-from model.sample import Sample
-from ai.training_functions import k_fold
-from ai.training_functions import create_dataframe_of_region
-from ai.training_functions import extend_parameters
-from ai.training_functions import parameter_tuning
-from ai.training_functions import evaluate_model
+from deltamsi.model.sample import Sample
+from deltamsi.ai.training_functions import k_fold
+from deltamsi.ai.training_functions import create_dataframe_of_region
+from deltamsi.ai.training_functions import extend_parameters
+from deltamsi.ai.training_functions import parameter_tuning
+from deltamsi.ai.training_functions import evaluate_model
 
 class Sample_Predictor():
     
