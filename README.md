@@ -14,15 +14,34 @@ This is free software, and you are welcome to redistribute it under certain cond
 
 ## Install
 
-DeltaMSI is written in Python3.9. It can be installed by using the Pipfile.  
+### If you are using conda  
+
+DeltaMSI is available in bioconda:  
+
+```bash
+conda install -c bioconda deltamsi
+```
+
+When installed through conda, you can use DeltaMSI in the conda environment via the command:
+
+```bash
+DeltaMSI
+```
 
 ### If you are using a Python virtual environment
 
+DeltaMSI is written in Python3.9. It can be installed by using the Pipfile.  
 To install DeltaMSI in a Python virtual environment do:
 
 ```bash
 pip3 install --no-cache-dir --user pipenv
-python -m pipenv install
+python3 -m pipenv install
+```
+
+When using the pipenv, you need to replace the command DeltaMSI by this and execute this in the installation directory:  
+
+```bash
+python3 -m pipenv run python src/app.py
 ```
 
 ### If you are using Containers like Docker or Podman
@@ -46,7 +65,7 @@ DeltaMSI has 3 modes: training, prediction and evaluation.
 ### Training
 
 ```bash
-python3 -m pipenv run python src/app.py train -bed /data/msi.bed -ihc /data/train_data.csv -o /data/deltamsi -bamf /data/train_samples.txt -v
+DeltaMSI train -bed /data/msi.bed -ihc /data/train_data.csv -o /data/deltamsi -bamf /data/train_samples.txt -v
 ```
 
 In this step, based on the supplied regions and samples, regions and samples are filtered, models trained and cutoffs generated. Everything happens automatically, without user interaction.  
@@ -91,11 +110,11 @@ In this step one or multiple samples are predicted.
 
 ```bash
 # Predicting a single sample
-python3 -m pipenv run python src/app.py predict -m /data/deltamsi/ -o /data/deltamsi_prediction --bam /data/mapped_data/sample1.bam -v
+DeltaMSI predict -m /data/deltamsi/ -o /data/deltamsi_prediction --bam /data/mapped_data/sample1.bam -v
 # Predicting multiple samples, giving multiple bam files
-python3 -m pipenv run python src/app.py predict -m /data/deltamsi/ -o /data/deltamsi_prediction --bam /data/mapped_data/sample1.bam --bam /data/mapped_data/sample2.bam -v
+DeltaMSI predict -m /data/deltamsi/ -o /data/deltamsi_prediction --bam /data/mapped_data/sample1.bam --bam /data/mapped_data/sample2.bam -v
 # Predicting multiple samples, giving a file paths txt file
-python3 -m pipenv run python src/app.py predict -m /data/deltamsi/ -o /data/deltamsi_prediction -bamf /data/bam_file_paths.txt -v
+DeltaMSI predict -m /data/deltamsi/ -o /data/deltamsi_prediction -bamf /data/bam_file_paths.txt -v
 ```
 
 #### Parameters
@@ -123,7 +142,7 @@ Result files are generated per sample, expect for the result_overview files whic
 This step can be used to evaluate the used method when more samples are being processed. This can help in clinical validation, but also in desciding to create a new model. Evaluation can only be done when IHC information is obtained for all samples.
 
 ```bash
-python3 -m pipenv run python src/app.py evaluate -m /data/deltamsi/aimodel.deltamsi -ihc /data/all_data.csv -o /data/deltamsi_evaluate -bamf /data/bam_file_paths.txt
+DeltaMSI evaluate -m /data/deltamsi/aimodel.deltamsi -ihc /data/all_data.csv -o /data/deltamsi_evaluate -bamf /data/bam_file_paths.txt
 ```
 
 #### Parameters
