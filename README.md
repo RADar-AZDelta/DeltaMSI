@@ -2,11 +2,16 @@
 
 DeltaMSI is a MSI screening tool using AI to score regions and samples.
 
+[![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg?style=flat)](http://bioconda.github.io/recipes/deltamsi/README.html) 
+![downloads](https://anaconda.org/bioconda/deltamsi/badges/downloads.svg) ![license](https://anaconda.org/bioconda/deltamsi/badges/license.svg)
+
 ## Citation
 
 Swaerts, K., Dedeurwaerdere, F., De Smet, D. et al. DeltaMSI: artificial intelligence-based modeling of microsatellite instability scoring on next-generation sequencing data. BMC Bioinformatics 24, 73 (2023). https://doi.org/10.1186/s12859-023-05186-3
 
 ## Licence
+
+![GPL3.0](https://img.shields.io/badge/GPL--3.0-red?style=for-the-badge)
 
 DeltaMSI  Copyright (C) 2022  Koen Swaerts, AZ Delta  
 This program comes with ABSOLUTELY NO WARRANTY; for details see LICENSE  
@@ -15,6 +20,7 @@ This is free software, and you are welcome to redistribute it under certain cond
 ## Install
 
 ### If you are using conda  
+![conda](https://img.shields.io/badge/conda-342B029.svg?&style=for-the-badge&logo=anaconda&logoColor=white)  
 
 DeltaMSI is available in bioconda:  
 
@@ -45,6 +51,7 @@ python3 -m pipenv run python src/app.py
 ```
 
 ### If you are using Containers like Docker or Podman
+![docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white) ![podman](https://img.shields.io/badge/podman-892CA0?style=for-the-badge&logo=podman&logoColor=white)  
 
 Podman and Docker can be used in the same way:
 
